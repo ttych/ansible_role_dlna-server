@@ -1,0 +1,6 @@
+---
+
+want_dlna_server: no
+
+
+dlna_server_type: gerbera

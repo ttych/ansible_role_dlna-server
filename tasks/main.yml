@@ -1,0 +1,14 @@
+---
+
+- name: DLNA server
+  when: want_dlna_server
+  block:
+
+    - ansible.builtin.include_tasks: _context.yml
+
+    - ansible.builtin.include_tasks: "{{ dlna_server_type }}.yml"
+
+
+- name: set has_dlna_server
+  ansible.builtin.set_fact:
+    has_dlna_server: "{{ want_dlna_server }}"
